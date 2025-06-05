@@ -1,25 +1,57 @@
-function hero(){
+
+import { FaTrophy, FaPlay, FaUsers } from "react-icons/fa";
+
+function Hero() {
     return (
-        <>
-        <section class="bg-white dark:bg-gray-900">
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-        <div class="mr-auto place-self-center lg:col-span-7">
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Payments tool for software companies</h1>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Get started
-                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Speak to Sales
-            </a> 
-        </div>
-        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup" />
-        </div>                
-    </div>
-</section>
-        </>
-    )
+        <section className="bg-gradient-to-br from-blue-100 via-blue-200 to-blue-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex items-center relative overflow-hidden">
+            {/* Decorative shapes */}
+            <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300 opacity-30 rounded-full blur-3xl -z-10 animate-pulse"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 opacity-20 rounded-full blur-2xl -z-10 animate-pulse"></div>
+            <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 w-full">
+                <div className="mr-auto place-self-center lg:col-span-7">
+                    <h1 className="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight leading-tight md:text-6xl xl:text-7xl bg-gradient-to-r from-blue-700 via-purple-600 to-pink-500 bg-clip-text text-transparent dark:text-white transition-all duration-300">
+                        <span className="inline-flex items-center gap-2">
+                            <FaTrophy className="text-yellow-400 animate-bounce" />
+                            Ultimate Quiz Application!
+                        </span>
+                    </h1>
+                    <p className="max-w-2xl mb-8 font-light text-gray-700 lg:mb-10 md:text-xl lg:text-2xl dark:text-gray-300 transition-all duration-300">
+                        Test your knowledge, challenge your friends, and climb the leaderboard.<br />
+                        <span className="font-semibold text-blue-700 dark:text-blue-300">Are you ready to become the quiz master?</span>
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                        <a
+                            href="/start-quiz"
+                            className="inline-flex items-center justify-center px-7 py-4 text-lg font-bold text-white rounded-xl bg-gradient-to-r from-blue-700 to-purple-600 shadow-lg hover:scale-105 hover:from-blue-800 hover:to-purple-700 transition-all duration-200 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                        >
+                            <FaPlay className="mr-2" />
+                            Start Quiz
+                        </a>
+                        <a
+                            href="/leaderboard"
+                            className="inline-flex items-center justify-center px-7 py-4 text-lg font-bold text-blue-700 border-2 border-blue-400 rounded-xl bg-white hover:bg-blue-50 dark:text-white dark:border-blue-700 dark:bg-gray-800 dark:hover:bg-blue-700 dark:hover:text-white transition-all duration-200"
+                        >
+                            <FaUsers className="mr-2" />
+                            View Leaderboard
+                        </a>
+                    </div>
+                </div>
+                <div className="hidden lg:mt-0 lg:col-span-5 lg:flex items-center justify-center">
+                    <div className="relative">
+                        <img
+                            src="./view-3d-button.jpg"
+                            alt="Quiz Illustration"
+                            className="w-full h-auto rounded-3xl shadow-2xl border-4 border-blue-200 dark:border-blue-900"
+                        />
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/80 dark:bg-gray-900/80 px-4 py-2 rounded-full shadow-lg flex items-center gap-2 text-blue-700 dark:text-blue-200 font-semibold text-lg">
+                            <FaTrophy />
+                            Top Score Awaits!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }
-export default hero;
+
+export default Hero;
