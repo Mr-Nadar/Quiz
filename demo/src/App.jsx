@@ -1,18 +1,24 @@
-import Footer from './Footer'
-import './NavBar'
-import NavBar from './NavBar'
-import './HeroS'
-import HeroS from './HeroS'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Login from "./Login";
+import { Home } from "./pages/home";
+
+
 function App() {
-  
+
 
   return (
-   <>
-   <NavBar />
-    <HeroS/>
-   <Footer />
-  
-   </>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+
+        </Routes>
+
+      </Router>
+
+    </>
   )
 }
 

@@ -1,10 +1,8 @@
-
 import { FaTrophy, FaPlay, FaUsers } from "react-icons/fa";
-
-function Hero() {
+export const HeroS = () => {
     return (
+        <div>
         <section className="bg-gradient-to-br from-blue-100 via-blue-200 to-blue-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex items-center relative overflow-hidden">
-            {/* Decorative shapes */}
             <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300 opacity-30 rounded-full blur-3xl -z-10 animate-pulse"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 opacity-20 rounded-full blur-2xl -z-10 animate-pulse"></div>
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 w-full">
@@ -51,7 +49,9 @@ function Hero() {
                 </div>
             </div>
         </section>
-    );
+        </div>
+    )
 }
+export default HeroS;
 
-export default Hero;
+
